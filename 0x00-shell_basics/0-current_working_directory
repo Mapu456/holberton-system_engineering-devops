@@ -1,4 +1,2 @@
 #!/bin/bash 
-
-dir_path=$(dirname $(realpath $0))
-echo $dir_path
+$ realpath 0x00-shell_basics
