@@ -1,3 +1,6 @@
 #!/bin/bash 
-pwd .
 
+path=$(realpath $0)
+ 
+dir_path=$(dirname $path)
+echo $dir_path
