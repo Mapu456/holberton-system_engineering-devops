@@ -1,2 +1,2 @@
 #!/bin/bash
-chmod -R u betty
+chown -R betty
