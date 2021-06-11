@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -Rmda */ more sort
+ls -lamp
