@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'Read more: https://en.wikipedia.org/wiki/Alea_iacta_est' > iacta
+awk iacta | tail -1
