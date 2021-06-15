@@ -1,2 +1,2 @@
 #!/bin/bash
-ls ./* -dprint |wc -l
+find ./* -dprint |wc -l
