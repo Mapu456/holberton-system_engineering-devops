@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -R |wc
+ls ./* -dprint |wc -l
