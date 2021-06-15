@@ -1,2 +1,2 @@
 #!/bin/bash
-DIRS=$(find PATH -type d)
+ls $PATH -type d | wc
