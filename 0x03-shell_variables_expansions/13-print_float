@@ -1,2 +1,3 @@
 #!/bin/bash
-echo NUM
+echo $((5,5/2,2))
+
