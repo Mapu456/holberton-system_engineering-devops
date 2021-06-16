@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -R | find . -empty | tr ' ' '\n'
+ls -R | find . -empty | tr ' ' '/n' | cut -d'/' -f2
