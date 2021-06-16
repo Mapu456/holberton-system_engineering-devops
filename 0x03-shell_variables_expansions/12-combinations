@@ -1,2 +1,2 @@
 #!/bin/bash
-echo o{a..ñ} o{p..z} | sort
+echo {a..z}{a..z}/n | sort
