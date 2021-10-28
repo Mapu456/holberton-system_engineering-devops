@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
-n=0
-while [ $n -lt 10 ]
+while [ 0 -lt 10 ]
 do
 	if [ $n == 3 ]
 	then
