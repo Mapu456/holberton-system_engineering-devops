@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
 # This script is displaying "Best School" 10 times
-pkill -f '4-to_infinity_and_beyond'
+n=0
+while [ $n -lt 15 ]
+do
+    echo "To infinity and beyond"
+	sleep 2
+done
