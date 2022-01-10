@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+#install HAproxy (load balancer)
+apt-get update -y
+apt-get -y install haproxy=2.0.\*
+
+CONFIG="
+# listener, the load balancer is gonna receive all requests
+frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+
+# Distribute requests using a roundrobin algorithm
+# Change to any server in case someone fail
+backend myBackend
+    mode http
+    balance roundrobin
+    server 3341-web-01 35.243.245.64
+    server 3341-web-02 18.234.66.163
+"
+echo "$CONFIG" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
