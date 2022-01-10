@@ -6,14 +6,11 @@ apt-get update -y
 apt-get -y install haproxy=2.0.\*
 
 CONFIG="
-# listener, the load balancer is gonna receive all requests
 frontend http_front
    bind *:80
    stats uri /haproxy?stats
    default_backend http_back
 
-# Distribute requests using a roundrobin algorithm
-# Change to any server in case someone fail
 backend myBackend
     mode http
     balance roundrobin
