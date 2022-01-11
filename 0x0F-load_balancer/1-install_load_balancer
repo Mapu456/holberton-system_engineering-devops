@@ -1,8 +1,18 @@
 #!/usr/bin/env bash
-#install HAproxy (load balancer)
-apt-get -y install software-properties-common
-add-apt-repository -y ppa:vbernat/haproxy-2.0
-apt-get update -y
-apt-get -y install haproxy=2.0.\*
-sed -i '/errorfile 504/a frontend http_front\n\tbind *:80\n\tstats uri /haproxy?stats\n\tdefault_backend http_back\n\nbackend http_back\n\tbalance roundrobin\n\tserver 3341-web-01 35.243.245.64 check\n\tserver 3341-web-02 18.234.66.163 check' /etc/haproxy/haproxy.cfg
+#install HAProxy (load balancer)
+
+CONFIG="
+frontend http_front
+    bind *:80
+    stats uri /haproxy?stats
+    default_backend http_back
+backend http_back
+    balance roundrobin
+    server web-01 35.243.245.64 check
+    server web-02 18.234.66.163 check 
+"
+sudo add-apt-repository -y ppa:vbernat/haproxy-1.7
+apt-get -y update
+apt-get -y install haproxy
+echo "$CONFIG" >> /etc/haproxy/haproxy.cfg
 service haproxy restart
