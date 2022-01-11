@@ -8,8 +8,8 @@ frontend http_front
     default_backend http_back
 backend http_back
     balance roundrobin
-    server web-01 35.243.245.64 check
-    server web-02 18.234.66.163 check 
+    server 3341-web-01 35.243.245.64 check
+    server 3341-web-02 18.234.66.163 check 
 "
 sudo add-apt-repository -y ppa:vbernat/haproxy-1.7
 apt-get -y update
