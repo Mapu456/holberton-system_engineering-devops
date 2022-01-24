@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+# Script to run the whoami command under the user passed as an argument.
