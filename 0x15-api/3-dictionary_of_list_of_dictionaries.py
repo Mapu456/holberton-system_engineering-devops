@@ -1,4 +1,3 @@
-
 #!/usr/bin/python3
 """Export data to json format"""
 
