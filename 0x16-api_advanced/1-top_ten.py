@@ -14,7 +14,6 @@ def top_ten(subreddit):
     headers = {'User-Agent': 'My User Agent 1.0'}
     response = requests.get(url, headers=headers)
 
-
     if response.status_code == 200:
         data = response.json()['data']['children']
         for posts in data[:10]:
